@@ -31,6 +31,15 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
     object_detection
                └── data
                      ├── images
+                     │
+                     └── annotations                         
+     ```
+* Add the images to *images* folder and the labelled data (XML files ~ explained in Data Preparation) to *annotations* folders respectively.
+  * It should look like this:
+    ```
+    object_detection
+               └── data
+                     ├── images
                      │      ├── image_1.jpg
                      │      ├── image_2.jpg
                      │      └── ...

@@ -15,6 +15,15 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 ## Environment Setup
 * [Google Drive](https://www.google.com/drive/) and [Google Collab](https://colab.research.google.com/) is used for this project.
 
+### Google Collab
+* Open a new notebook
+* From the top left menu: Go to Runtime -> Change runtime type -> select GPU from hardware accelerator.
+  * Some pretrain Models support TPU. Ours uses GPU
+
+**Important Note:** The kernel disconnects shortly after your computer sleeps or after using the Colab GPU for 12 hours. Sadly, the training will need to be restarted from scratch if the trained model did not get saved
+
+### Google Drive
+
 ## Data Preparation
 * Custom Dataset of Where's Waldo picture was created using Google, Tumblr and other resources.
   * Located in folder named *UnlabelledData*

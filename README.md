@@ -11,6 +11,8 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 *Source: [Wikipedia](https://en.wikipedia.org/wiki/Where%27s_Wally%3F)*
 
 ## Data Preparation
+* Custom Dataset of Where's Waldo picture was found using Google.
+* The data was labelled using [LabelImg](https://github.com/tzutalin/labelImg)
 
 ## Data Preprocressing
 

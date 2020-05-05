@@ -22,7 +22,8 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
     * `pip3 install pyqt5 lxml` 
     * `make qt5py3`
     * `python3 labelImg.py`
-       <img src="README Resources/labelimg.gif" width="280" />
+    
+       <img src="README Resources/labelimg.gif" width="560" />
 
 ## Data Preprocressing
 

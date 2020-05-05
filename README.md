@@ -3,4 +3,14 @@ A custom object detection model to find Waldo in a given picture made using Tens
 
 **Note** *: This work is no way intended to infringe upon any copyright or trademark.*
 
+## Data Preparation
 
+## Data Preprocressing
+
+## Setting up Model
+
+## Training the model
+
+## Testing the model
+
+## Examples

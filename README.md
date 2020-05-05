@@ -27,8 +27,7 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 * Create a folder named *object_detection* with a subfolder named *data*
 * Create two subfolder in the folder *data* named *images* and *annotations*
   * It should look like this:
-```
-
+    ```
     object_detection
                └── data
                      ├── images
@@ -39,9 +38,8 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
                      └── annotations
                             ├── image_1.xml
                             ├── image_2.xml
-                            └── ...
-                            
-```
+                            └── ...                            
+     ```
 
 ## Data Preparation
 * Custom Dataset of Where's Waldo picture was created using Google, Tumblr and other resources.

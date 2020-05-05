@@ -8,7 +8,7 @@ Where's Waldo consist of a series of detailed double-page spread illustrations d
 
 Readers are challenged to find a character named Wally hidden in the group. Wally is identified by his red-and-white-striped shirt, bobble hat, and glasses.
 
-*Source:* [Wikipedia](https://en.wikipedia.org/wiki/Where%27s_Wally%3F)
+*Source: [Wikipedia](https://en.wikipedia.org/wiki/Where%27s_Wally%3F)*
 
 ## Data Preparation
 

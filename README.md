@@ -24,6 +24,24 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 **Important Note:** The kernel disconnects shortly after your computer sleeps or after using the Colab GPU for 12 hours. Sadly, the training will need to be restarted from scratch if the trained model did not get saved
 
 ### Google Drive
+* Create a folder named *object_detection* with a subfolder named *data*
+* Create two subfolder in the folder *data* named *images* and *annotations*
+  * It should look like this:
+```
+
+    object_detection
+               └── data
+                     ├── images
+                     │      ├── image_1.jpg
+                     │      ├── image_2.jpg
+                     │      └── ...
+                     │
+                     └── annotations
+                            ├── image_1.xml
+                            ├── image_2.xml
+                            └── ...
+                            
+```
 
 ## Data Preparation
 * Custom Dataset of Where's Waldo picture was created using Google, Tumblr and other resources.

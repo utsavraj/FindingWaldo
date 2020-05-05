@@ -19,9 +19,8 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
   * To Run LabelImg, use the following command in Terminal for MacOS:
     * `git clone https://github.com/tzutalin/labelImg.git`
     * `cd labelImg`
-    * `brew install qt qt4`
-    * `brew install libxml2`
-    * `make qt4py2`
+    * `pip3 install pyqt5 lxml` 
+    * `make qt5py3`
     * `python labelImg.py`
 
 ## Data Preprocressing

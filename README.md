@@ -13,6 +13,7 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 ## Data Preparation
 * Custom Dataset of Where's Waldo picture was found using Google.
 * The data was labelled using [LabelImg](https://github.com/tzutalin/labelImg)
+  * Annotations are saved as XML files in PASCAL VOC format, the format used by ImageNet.
 
 ## Data Preprocressing
 

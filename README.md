@@ -13,6 +13,7 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 *Source: [Wikipedia](https://en.wikipedia.org/wiki/Where%27s_Wally%3F)*
 
 ## Environment Setup
+* Python 3.7.5 and Tensorflow version 1.15.0
 * [Google Drive](https://www.google.com/drive/) and [Google Collab](https://colab.research.google.com/) is used for this project.
 
 ### Google Collab

@@ -16,7 +16,7 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 * The data was labelled using [LabelImg](https://github.com/tzutalin/labelImg)
   * While labelling data, try to cover using the rectangle all the distinctive features of Waldo.
   * Annotations are saved as XML files in PASCAL VOC format, the format used by ImageNet.
-  * To Run LabelImg:
+  * To Run LabelImg, use the following command in Terminal:
     * `git clone https://github.com/tzutalin/labelImg.git`
     * `cd labelImg`
 

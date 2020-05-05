@@ -3,6 +3,13 @@ A custom object detection model to find Waldo in a given picture made using Tens
 
 **Note** *: This work is no way intended to infringe upon any copyright or trademark.*
 
+## Background
+Where's Waldo consist of a series of detailed double-page spread illustrations depicting dozens or more people doing a variety of amusing things at a given location. 
+
+Readers are challenged to find a character named Wally hidden in the group. Wally is identified by his red-and-white-striped shirt, bobble hat, and glasses.
+
+*Source:* [Wikipedia](https://en.wikipedia.org/wiki/Where%27s_Wally%3F)
+
 ## Data Preparation
 
 ## Data Preprocressing

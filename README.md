@@ -195,8 +195,22 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
                    │      └── ...
                    └── ...
     ```
-## Training the model
-
+## Configuring Training Pipeline
+* Configuration files (`.config`) are just Protocol Buffers objects described in the `.proto` files under *object_detection/models/research/object_detection/protos*. 
+* They need to be edited in order to run the model. The sample config files are located *object_detection/models/research/object_detection/samples/configs/*
+* We use `ssd_mobilenet_v2_coco.config` 
+  * The required edit includes:
+    * In `model {} > ssd {}` change `num_classes` to the number of classes/labels
+   ```
+    # For only one class (eg. just Waldo)
+    model {
+     ssd {
+       num_classes: 1
+   ```
+    * `train_config {}`: change fine_tune_checkpoint to the checkpoint file path.
+   ` fine_tune_checkpoint: "/gdrive/My Drive/object_detection/models/research/pretrained_model/model.ckpt" `
+   **NOTE:** The exact file name model.ckpt doesn't exist. This is where the model will be saved during training. 
+      * train_input_reader {}: set the path to the train_labels.record and the label map pbtxt file.
 ## Testing the model
 
 ## Examples

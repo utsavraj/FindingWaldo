@@ -280,7 +280,7 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 <img src="/README Resources/TensorBoard.png" width="900" align="center" >
 
 
-## Training the Model
+## Training and Testing the Model
 * Go to: *object_detection/models/research/object_detection*
 * Run command `python3 object_detection/model_main.py \ --pipeline_config_path= PATH_TO_PIPELINE_CONFIG --train_dir=PATH_TO_TRAIN_DIR`
   * `model_main.py` which runs the training process
@@ -295,7 +295,7 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 * The script will automatically store a checkpoint file after a certain number of steps (600 seconds or 5 steps), so that you can restore your saved checkpoints at any time in case your computer crashes while learning. This means that when you want to finish training the model, you can just terminate the script
 * The general rule as to when to stop training is when the loss on our evaluation set stops decreasing or is generally very low.
 
-## Testing the Model
+## Running the Model
 * Convert the model to a frozen model `frozen_inference_graph.pb` that is used for inference. 
   * **Note**: This frozen model cannot be used to resume training. However, `saved_model.pb` gets exported as well which can be used to resume training as it has all the weights.
 
@@ -307,6 +307,8 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 
 * Access all the files in */gdrive/My Drive/object_detection/models/research/fine_tuned_model/
 * **NOTE:** label map `.pbtxt` file is also required for testing.
+* Create a *test* folder in */gdrive/My Drive/object_detection/* and test images ( in `jpg` format) to it.
+* Run the code provided in the notebook to display output in Google Colab
 
 ## Examples
 

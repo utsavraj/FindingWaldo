@@ -209,8 +209,10 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
    ```
     * `train_config {}`: change fine_tune_checkpoint to the checkpoint file path.
    ` fine_tune_checkpoint: "/gdrive/My Drive/object_detection/models/research/pretrained_model/model.ckpt" `
-   **NOTE:** The exact file name model.ckpt doesn't exist. This is where the model will be saved during training. 
-      * train_input_reader {}: set the path to the train_labels.record and the label map pbtxt file.
+   
+     **NOTE:** The exact file name model.ckpt doesn't exist. This is where the model will be saved during training. 
+     
+    * train_input_reader {}: set the path to the train_labels.record and the label map pbtxt file.
 ## Testing the model
 
 ## Examples

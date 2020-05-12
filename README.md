@@ -74,6 +74,9 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 
 ## Data Preprocressing
 
+* Tensorflow accepts the data as tfrecords (which is a binary file that run fast with low memory usage), hence packing our labels (saved as a `.csv`) and images (`.jpeg`) into a single binary `.tfrecord` file. 
+
+
 ## Setting up Model
 
 ## Training the model

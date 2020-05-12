@@ -207,8 +207,10 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
      ssd {
        num_classes: 1
    ```
-    * `train_config {}`: change fine_tune_checkpoint to the checkpoint file path. **NOTE:** The exact file name model.ckpt doesn't exist. This is where the model will be saved during training. 
+    * `train_config {}`: change fine_tune_checkpoint to the checkpoint file path. **NOTE:** The exact file name model.ckpt doesn't exist. This is where the model will be saved during training.
+    
    ` fine_tune_checkpoint: "/gdrive/My Drive/object_detection/models/research/pretrained_model/model.ckpt" `
+   
     * `train_input_reader {}`: set the path to the `train_labels.record` and the label map `pbtxt` file.
     
       ```
@@ -217,7 +219,6 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
           #path to the training TFRecord
             input_path: "/gdrive/My Drive/object_detection/data/train_labels.record"
         }
-     #path to the label map file
            label_map_path: "/gdrive/My Drive/object_detection/data/label_map.pbtxt"
        }
       ```
@@ -236,7 +237,41 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
          }
          ``` 
 ### Optional Edits to Config file    
+* In `train_config {}`, you can add image augmentation. List can be found here: 
 
-## Testing the model
+     ```
+     data_augmentation_options {
+         random_adjust_contrast {
+         }
+       }
+       data_augmentation_options {
+         random_rgb_to_gray {
+         }
+       }
+       data_augmentation_options {
+         random_vertical_flip {
+         }
+       }
+       data_augmentation_options {
+         random_rotation90 {
+         }
+       }
+       data_augmentation_options {
+         random_patch_gaussian {
+         }
+     ```
+* In `model {} > ssd {} > box_predictor {}`: set `use_dropout` to `true` This will be helpful to counter overfitting.
+
+* In `eval_config : {}` set the number of testing images you have in `num_examples` and remove `max_eval` to evaluate indefinitely
+
+       ```
+       eval_config: {
+         num_examples: 400 # the number of testing images
+         num_visualizations: 20 # the number of visualization to see in tensorboard
+       }
+       ```
+
+## Tensorboard
+* While the training is running, you can check the accuracy of the model with [Tensorboard](https://www.tensorflow.org/tensorboard/) (implemented using [ngrok](https://ngrok.com/))
 
 ## Examples

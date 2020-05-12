@@ -1,7 +1,7 @@
 # <img src="/README Resources/684929827Find Waldo.jpg" width="150" align="center" > Finding Waldo
 [WORK IN PROGRESS]
 
-A custom object detection model to find Waldo in a given picture made using TensorFlow Object Detection API.
+Using transfer learning to retrain a pre-trained CNN model to find Waldo in a given picture made using TensorFlow Object Detection API.
 
 **Note** *: This work is no way intended to infringe upon any copyright or trademark.*
 
@@ -52,11 +52,12 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 
 ## Data Preparation
 * Custom Dataset of Where's Waldo picture was created using Google, Tumblr and other resources.
-  * Located in folder named *UnlabelledData*
-  * The target (Wally) varies in size (a scaling issue)
-  * Images have repeating patterns of differing significance (red & white stripes present on other objects)
-  * There is occlusion (where Wally is partially blocked from view by other scene objects)
-  * The training set is unbalanced (most image portions don’t contain Wally)
+  * Located in folder named *object_detection/data/images*
+  * In order to train a strong model:
+   * The target (Wally) varies in size (a scaling issue)
+   * Images have repeating patterns of differing significance (red & white stripes present on other objects)
+   * There is occlusion (where Wally is partially blocked from view by other scene objects)
+   * Converting images to black-white and grayscale.
   
 * The data was labelled using [LabelImg](https://github.com/tzutalin/labelImg)
   * While labelling data, try to cover using the rectangle all the distinctive features of Waldo.

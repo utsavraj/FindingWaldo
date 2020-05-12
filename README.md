@@ -14,6 +14,7 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 
 ## Environment Setup
 * Python 3.7.5 and Tensorflow version 1.15.2
+  * *Numpy version 1.16.2* as Numpy 1.18.0 breaks the evaluation process for both TensorFlow and PyTorch object detection
 * [Google Drive](https://www.google.com/drive/) and [Google Collab](https://colab.research.google.com/) is used for this project.
 
 ### Google Collab

@@ -54,10 +54,10 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 * Custom Dataset of Where's Waldo picture was created using Google, Tumblr and other resources.
   * Located in folder named *object_detection/data/images*
   * In order to train a strong model:
-   * The target (Wally) varies in size (a scaling issue)
-   * Images have repeating patterns of differing significance (red & white stripes present on other objects)
-   * There is occlusion (where Wally is partially blocked from view by other scene objects)
-   * Converting images to black-white and grayscale.
+    * The target (Wally) varies in size (a scaling issue)
+    * Images have repeating patterns of differing significance (red & white stripes present on other objects)
+    * There is occlusion (where Wally is partially blocked from view by other scene objects)
+    * Converting images to black-white and grayscale.
   
 * The data was labelled using [LabelImg](https://github.com/tzutalin/labelImg)
   * While labelling data, try to cover using the rectangle all the distinctive features of Waldo.

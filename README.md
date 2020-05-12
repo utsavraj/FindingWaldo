@@ -276,6 +276,7 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 * Using tensorboard,  monitor the loss, mAP, AR, the pictures and the annotations during training. At each evaluation step, you could see how good your model was at detecting the object. 
    * Note: A max of 20 connection per minute is allowed when using ngrok, you will not be able to access tensorboard while the model is logging.
 
+<img src="/README Resources/TensorBoard.png" width="450" align="center" >
 
 
 ## Training the Model

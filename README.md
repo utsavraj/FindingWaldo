@@ -273,5 +273,8 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 
 ## Tensorboard
 * While the training is running, you can check the accuracy of the model with [Tensorboard](https://www.tensorflow.org/tensorboard/) (implemented using [ngrok](https://ngrok.com/))
+* Using tensorboard,  monitor the loss, mAP, AR, the pictures and the annotations during training. At each evaluation step, you could see how good your model was at detecting the object. 
+   * Note: A max of 20 connection per minute is allowed when using ngrok, you will not be able to access tensorboard while the model is logging.
+
 
 ## Examples

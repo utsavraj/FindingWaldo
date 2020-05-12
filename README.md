@@ -1,5 +1,4 @@
 # <img src="/README Resources/684929827Find Waldo.jpg" width="150" align="center" > Finding Waldo
-[WORK IN PROGRESS]
 
 Using transfer learning to retrain a pre-trained SSD model to find Waldo in a given picture made using TensorFlow Object Detection API.
 
@@ -155,9 +154,11 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 ## Model
 * Installing TensorFlow Object Detection API Models using https://github.com/tensorflow/models.git
   * The new *model* folder now should have a pretrained model with a `.ckpt` checkpoint file
+  
 * While the model could be trained from scratch starting with randomly initialised network weights, this process would probably take weeks. Hence, we used a pretrain model on the COCO dataset using transfer learning to understand our label by training from our dataset.
-* We are using Single Shot MultiBox Detector, Specifically **ssd_mobilenet_v2_coco** model.
-  * Version: *ssd_mobilenet_v2_coco_2018_03_29*
+
+* We are using Single Shot MultiBox Detector, specifically **ssd_mobilenet_v2_coco** model.
+  * ***Version***: *ssd_mobilenet_v2_coco_2018_03_29*
   * More information about SSD and other models: https://heartbeat.fritz.ai/a-2019-guide-to-object-detection-9509987954c3#b49b
 * Check that all labels are present in *labels.txt* so it looks for that object and labels it.
   eg.

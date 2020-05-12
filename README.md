@@ -124,9 +124,34 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
      ```
      
 * Tensorflow accepts the data as tfrecords (which is a binary file that run fast with low memory usage), hence packing our labels (saved as a `.csv`) and images (`.jpeg`) into a single binary `.tfrecord` file. 
-
-
-
+  * Add your custom object text in the function class_text_to_int below by changing the row_label variable (This is the text that will appear on the detected object). *Add more labels if you have more than one object.
+  eg. 
+  ```
+  def class_text_to_int(row_label):
+   if row_label == 'NAME_OF_THE_LABEL':
+     return 1
+   else:
+     None
+  ```
+  * It should look like this:
+  ```
+    object_detection/
+               └── data/
+                    ├── images/
+                    │      └── ...
+                    ├── annotations/
+                    │      └── ...
+                    ├── train_labels/
+                    │      └── ...
+                    ├── test_labels/
+                    │      └── ...
+                    ├── label_map.pbtxt
+                    ├── test_labels.csv
+                    ├── train_labels.csv
+                    ├── test_labels.records
+                    └── train_labels.records
+   ```
+   
 ## Setting up Model
 
 ## Training the model

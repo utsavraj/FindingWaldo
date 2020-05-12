@@ -1,7 +1,7 @@
 # <img src="/README Resources/684929827Find Waldo.jpg" width="150" align="center" > Finding Waldo
 [WORK IN PROGRESS]
 
-Using transfer learning to retrain a pre-trained CNN model to find Waldo in a given picture made using TensorFlow Object Detection API.
+Using transfer learning to retrain a pre-trained SSD model to find Waldo in a given picture made using TensorFlow Object Detection API.
 
 **Note** *: This work is no way intended to infringe upon any copyright or trademark.*
 
@@ -167,7 +167,34 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
      name: 'waldo'
      }
      ```
+* It should look like this:
+   ```
+   object_detection/
+              ├── data/
+              │    ├── images/
+              │    │      └── ...
+              │    ├── annotations/
+              │    │      └── ...
+              │    ├── train_labels/
+              │    │      └── ...
+              │    ├── test_labels/
+              │    │      └── ...
+              │    ├── label_map.pbtxt
+              │    ├── test_labels.csv
+              │    ├── train_labels.csv
+              │    ├── test_labels.records
+              │    └── train_labels.records
+              │
+              └── models/           
+                   ├── research/
+                   │      ├── training/
+                   │      │      └── ...
+                   │      ├── pretrained_model/
 
+                   │      ├── frozen_inference_graph.pb
+                   │      └── ...
+                   └── ...
+    ```
 ## Training the model
 
 ## Testing the model

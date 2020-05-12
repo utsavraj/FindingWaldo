@@ -290,6 +290,7 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 * Look for **loss** in the output.
 
    <img src="/README Resources/output_loss.png" width="900" align="center" >
+   
   * Loss is a summation of the errors made for each example in training or validation sets. The lower, the better - if it’s slowly decreasing, that means that your model is learning (…or overfitting your training data).
 * The script will automatically store a checkpoint file after a certain number of steps (600 seconds or 5 steps), so that you can restore your saved checkpoints at any time in case your computer crashes while learning. This means that when you want to finish training the model, you can just terminate the script
 * The general rule as to when to stop training is when the loss on our evaluation set stops decreasing or is generally very low.

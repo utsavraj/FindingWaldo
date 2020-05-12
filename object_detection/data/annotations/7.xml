@@ -1,0 +1,25 @@
+<annotation>
+	<folder>annotations</folder>
+	<filename>7.jpg</filename>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3566</width>
+		<height>2257</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Waldo</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>3064</xmin>
+			<ymin>878</ymin>
+			<xmax>3099</xmax>
+			<ymax>943</ymax>
+		</bndbox>
+	</object>
+</annotation>

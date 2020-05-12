@@ -1,0 +1,26 @@
+<annotation>
+	<folder>annotations</folder>
+	<filename>115G.jpg</filename>
+	<path>/Users/utsav/Desktop/object_detection/data/annotations/115G.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>256</width>
+		<height>256</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Waldo</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>120</xmin>
+			<ymin>168</ymin>
+			<xmax>167</xmax>
+			<ymax>234</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -74,7 +74,28 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 
 ## Data Preprocressing
 
+* Dividing the `xml` files into test and train labels.
+  * **NOTE**: They will be moved to *test_labels* and *train_labels* by the hash value. 
+  * It should look like this:
+   ```
+    object_detection
+               └── data
+                     ├── images
+                     │      ├── image_1.jpg
+                     │      ├── image_2.jpg
+                     ├── annotations/
+                     │      └── [EMPTY]
+                     ├── train_labels/
+                            ├── image_1.xml
+                            ├── image_4.xml
+                            │      └── ...
+                     ├── test_labels/
+                            ├── image_2.xml
+                            ├── image_3.xml
+                            │      └── ...                   
+     ```
 * Tensorflow accepts the data as tfrecords (which is a binary file that run fast with low memory usage), hence packing our labels (saved as a `.csv`) and images (`.jpeg`) into a single binary `.tfrecord` file. 
+
 
 
 ## Setting up Model

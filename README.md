@@ -53,6 +53,11 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 ## Data Preparation
 * Custom Dataset of Where's Waldo picture was created using Google, Tumblr and other resources.
   * Located in folder named *UnlabelledData*
+  * The target (Wally) varies in size (a scaling issue)
+  * Images have repeating patterns of differing significance (red & white stripes present on other objects)
+  * There is occlusion (where Wally is partially blocked from view by other scene objects)
+  * The training set is unbalanced (most image portions don’t contain Wally)
+  
 * The data was labelled using [LabelImg](https://github.com/tzutalin/labelImg)
   * While labelling data, try to cover using the rectangle all the distinctive features of Waldo.
   * Annotations are saved as XML files in PASCAL VOC format, the format used by ImageNet.

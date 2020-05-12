@@ -285,7 +285,7 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 * Run command `python3 object_detection/model_main.py \ --pipeline_config_path= PATH_TO_PIPELINE_CONFIG --train_dir=PATH_TO_TRAIN_DIR`
   * `model_main.py` which runs the training process
   * `PATH_TO_PIPELINE_CONFIG` is the path to our pipeline config file. eg. `--pipeline_config_path=/gdrive/My\ Drive/object_detection/models/research/object_detection/samples/configs/ssd_mobilenet_v2_coco.config`
-  * `PATH_TO_TRAIN_DIR` is a newly created directory where our new checkpoints and model will be stored. `--model_dir=training/`
+  * `PATH_TO_TRAIN_DIR` is a newly created directory where our new checkpoints and model will be stored. eg.`--model_dir=training/`
   
 * Look for **loss** in the output.
 
@@ -296,6 +296,17 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 * The general rule as to when to stop training is when the loss on our evaluation set stops decreasing or is generally very low.
 
 ## Testing the Model
+* Convert the model to a frozen model `frozen_inference_graph.pb` that is used for inference. 
+  * **Note**: This frozen model cannot be used to resume training. However, `saved_model.pb` gets exported as well which can be used to resume training as it has all the weights.
+
+* Go to: *object_detection/models/research/object_detection*
+* Run command  `python export_inference_graph.py — pipeline_config_path PATH_TO_PIPELINE_CONFIG --trained_checkpoint_prefix PATH_TO_CHECKPOINT --output_directory OUTPUT_PATH`
+  * `PATH_TO_PIPELINE_CONFIG` is the path to our pipeline config file. eg. `--pipeline_config_path=/gdrive/My\ Drive/object_detection/models/research/object_detection/samples/configs/ssd_mobilenet_v2_coco.config`
+  * `PATH_TO_CHECKPOINT` is where your model is saved. 
+  * `OUTPUT_PATH` is where you want to export your frozen model eg. ./fine_tuned_model
+
+* Access all the files in */gdrive/My Drive/object_detection/models/research/fine_tuned_model/
+* **NOTE:** label map `.pbtxt` file is also required for testing.
 
 ## Examples
 

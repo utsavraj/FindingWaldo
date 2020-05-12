@@ -153,6 +153,18 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
    ```
    
 ## Model
+* Installing TensorFlow Object Detection API Models using https://github.com/tensorflow/models.git
+* While the model could be trained from scratch starting with randomly initialised network weights, this process would probably take weeks. Hence, we used a pretrain model on the COCO dataset using transfer learning to understand our label by training from our dataset.
+* We are using Single Shot MultiBox Detector, Specifically **ssd_mobilenet_v2_coco** model.
+  * Version: *ssd_mobilenet_v2_coco_2018_03_29*
+  * More information about SSD and other models: https://heartbeat.fritz.ai/a-2019-guide-to-object-detection-9509987954c3#b49b
+* Check that all labels are present in *labels.txt* so it looks for that object and labels it.
+  eg.
+  ```
+  item {
+  id: 1
+  name: 'waldo'
+  ```
 
 ## Training the model
 

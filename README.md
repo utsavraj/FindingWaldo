@@ -161,12 +161,12 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
   * More information about SSD and other models: https://heartbeat.fritz.ai/a-2019-guide-to-object-detection-9509987954c3#b49b
 * Check that all labels are present in *labels.txt* so it looks for that object and labels it.
   eg.
-  ```
-  item {
-  id: 1
-  name: 'waldo'
-  }
-  ```
+     ```
+     item {
+     id: 1
+     name: 'waldo'
+     }
+     ```
 
 ## Training the model
 

@@ -53,7 +53,8 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 
 ## Data Preparation
 * Custom Dataset of Where's Waldo picture was created using Google, Tumblr and other resources.
-  * Located in folder named *object_detection/data/images*
+  * **NOTE:** Images should be in `jpg` format. If you find other formats like `png` etc, convert them using online converters.
+  * Located in folder named *object_detection/data/images* 
   * In order to train a strong model:
     * The target (Wally) varies in size (a scaling issue)
     * Images have repeating patterns of differing significance (red & white stripes present on other objects)
@@ -94,6 +95,34 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
                             ├── image_3.xml
                             └── ...                   
      ```
+* Create two `csv` files for the `.xml` files in each *train_labels* and *test_labels* as well a `pbtxt` file.
+  * These two csv files will contain each image’s file name, the label, box position, etc. 
+  * Also, more than one row is created for the same picture if there is more than one class or label for it in a csv file.
+  * `pbtxt` file that will contain the label map for each class. This file will tell the model what each object is by defining a mapping of class names to class ID numbers
+  * It should look like this:
+   ```
+    object_detection
+               └── data
+                     ├── images
+                     │      ├── image_1.jpg
+                     │      ├── image_2.jpg
+                     ├── annotations/
+                     │      └── [EMPTY]
+                     ├── train_labels/
+                     │      ├── image_1.xml
+                     │      ├── image_4.xml
+                     │      └── ...
+                     ├── test_labels/
+                     │      ├── image_2.xml
+                     │      ├── image_3.xml
+                     │      └── ... 
+                     ├── label_map.pbtxt
+                     │
+                     ├── test_labels.csv
+                     │
+                     └── train_labels.csv
+     ```
+     
 * Tensorflow accepts the data as tfrecords (which is a binary file that run fast with low memory usage), hence packing our labels (saved as a `.csv`) and images (`.jpeg`) into a single binary `.tfrecord` file. 
 
 

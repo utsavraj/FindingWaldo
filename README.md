@@ -275,12 +275,22 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 ## Tensorboard
 * While the training is running, you can check the accuracy of the model with [Tensorboard](https://www.tensorflow.org/tensorboard/) (implemented using [ngrok](https://ngrok.com/) - go to the link it provides)
 * Using tensorboard,  monitor the loss, mAP, AR, the pictures and the annotations during training. At each evaluation step, you could see how good your model was at detecting the object. 
-   * Note: A max of 20 connection per minute is allowed when using ngrok, you will not be able to access tensorboard while the model is logging.
+   * **NOTE**: A max of 20 connection per minute is allowed when using ngrok, you will not be able to access tensorboard while the model is logging.
 
 <img src="/README Resources/TensorBoard.png" width="900" align="center" >
 
 
 ## Training the Model
+* Go to: *object_detection/models/research/object_detection*
+* Run command `python3 object_detection/model_main.py \ --pipeline_config_path= PATH_TO_PIPELINE_CONFIG --train_dir=PATH_TO_TRAIN_DIR`
+  * `model_main.py` which runs the training process
+  * `PATH_TO_PIPELINE_CONFIG` is the path to our pipeline config file. eg. `--pipeline_config_path=/gdrive/My\ Drive/object_detection/models/research/object_detection/samples/configs/ssd_mobilenet_v2_coco.config`
+  * `PATH_TO_TRAIN_DIR` is a newly created directory where our new checkpoints and model will be stored. `--model_dir=training/`
+  
+* Look for LOSS in the output.
+* Loss is a summation of the errors made for each example in training or validation sets. The lower, the better - if it’s slowly decreasing, that means that your model is learning (…or overfitting your training data).
+* The script will automatically store a checkpoint file after a certain number of steps (600 seconds or 5 steps), so that you can restore your saved checkpoints at any time in case your computer crashes while learning. This means that when you want to finish training the model, you can just terminate the script
+* The general rule as to when to stop training is when the loss on our evaluation set stops decreasing or is generally very low.
 
 ## Testing the Model
 

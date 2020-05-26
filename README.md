@@ -1,6 +1,6 @@
 # <img src="/README Resources/684929827Find Waldo.jpg" width="150" align="center" > Finding Waldo
 
-Using transfer learning to retrain a pre-trained SSD model to find Waldo in a given picture made using TensorFlow Object Detection API.
+Using transfer learning to retrain a pre-trained SSD model to find Waldo in a given picture. Made using TensorFlow Object Detection API.
 
 **Note** *: This work is no way intended to infringe upon any copyright or trademark.*
 

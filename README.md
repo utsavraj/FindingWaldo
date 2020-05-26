@@ -312,4 +312,8 @@ Readers are challenged to find a character named Wally hidden in the group. Wall
 
 ## Examples
 
+<img src="/README Resources/example_1.png" width="900" align="center" >
 
+<img src="/README Resources/example_2.png" width="900" align="center" >
+
+<img src="/README Resources/example_3.png" width="900" align="center" >
